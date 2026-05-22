@@ -21,6 +21,10 @@
       "@luma-bank/api-client": ["packages/api-client/src/index.ts"],
       "@luma-bank/config": ["packages/config/src/index.ts"],
       "@luma-bank/domain": ["packages/domain/src/index.ts"],
+      "@luma-bank/domain/banking": ["packages/domain/src/banking/index.ts"],
+      "@luma-bank/domain/investments": ["packages/domain/src/investments/index.ts"],
+      "@luma-bank/domain/money": ["packages/domain/src/money/index.ts"],
+      "@luma-bank/domain/shared": ["packages/domain/src/shared/index.ts"],
       "@luma-bank/ui": ["packages/ui/src/index.tsx"],
       "@luma-bank/utils": ["packages/utils/src/index.ts"]
     }

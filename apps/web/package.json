@@ -6,9 +6,9 @@
   "scripts": {
     "build": "next build",
     "clean": "rm -rf .next tsconfig.tsbuildinfo",
-    "dev": "next dev",
+    "dev": "rm -rf .next tsconfig.tsbuildinfo && next dev",
     "lint": "eslint .",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "next typegen && tsc --noEmit"
   },
   "dependencies": {
     "@luma-bank/domain": "workspace:*",

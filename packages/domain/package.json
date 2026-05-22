@@ -9,6 +9,22 @@
     ".": {
       "types": "./dist/index.d.ts",
       "default": "./dist/index.js"
+    },
+    "./banking": {
+      "types": "./dist/banking/index.d.ts",
+      "default": "./dist/banking/index.js"
+    },
+    "./money": {
+      "types": "./dist/money/index.d.ts",
+      "default": "./dist/money/index.js"
+    },
+    "./investments": {
+      "types": "./dist/investments/index.d.ts",
+      "default": "./dist/investments/index.js"
+    },
+    "./shared": {
+      "types": "./dist/shared/index.d.ts",
+      "default": "./dist/shared/index.js"
     }
   },
   "scripts": {

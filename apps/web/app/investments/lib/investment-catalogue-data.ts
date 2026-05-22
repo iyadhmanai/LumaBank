@@ -1,0 +1,284 @@
+import { searchInstruments, type Instrument } from "@luma-bank/domain/investments";
+
+export const instruments: Instrument[] = [
+  {
+    id: "instrument-msci-world",
+    isin: "IE00B4L5Y983",
+    name: "iShares Core MSCI World UCITS ETF",
+    instrumentType: "ETF",
+    currency: "EUR",
+    issuerName: "BlackRock",
+    assetClass: "Equity",
+    region: "Global",
+    sector: "Broad market",
+    riskScore: 4,
+    sriScore: 4,
+    expectedReturnAnnual: 0.064,
+    volatilityAnnual: 0.142,
+    maxDrawdown: -0.34,
+    ongoingCharges: 0.002,
+    liquidityProfile: "Daily exchange-traded liquidity",
+    isComplex: false,
+    isAvailableForRetail: true,
+    kidDocumentUrl: "https://documents.example/luma/IE00B4L5Y983-kid.pdf",
+    factsheetUrl: "https://documents.example/luma/IE00B4L5Y983-factsheet.pdf",
+    prospectusUrl: "https://documents.example/luma/IE00B4L5Y983-prospectus.pdf",
+    benchmarkId: "benchmark-msci-world",
+    createdAt: "2026-01-01T00:00:00.000Z",
+    updatedAt: "2026-05-20T08:00:00.000Z"
+  },
+  {
+    id: "instrument-euro-stoxx",
+    isin: "LU0908500753",
+    name: "Amundi Euro Stoxx 50 UCITS ETF",
+    instrumentType: "ETF",
+    currency: "EUR",
+    issuerName: "Amundi",
+    assetClass: "Equity",
+    region: "Eurozone",
+    sector: "Large cap",
+    riskScore: 4,
+    sriScore: 4,
+    expectedReturnAnnual: 0.052,
+    volatilityAnnual: 0.168,
+    maxDrawdown: -0.39,
+    ongoingCharges: 0.0015,
+    liquidityProfile: "Daily exchange-traded liquidity",
+    isComplex: false,
+    isAvailableForRetail: true,
+    kidDocumentUrl: "https://documents.example/luma/LU0908500753-kid.pdf",
+    factsheetUrl: "https://documents.example/luma/LU0908500753-factsheet.pdf",
+    benchmarkId: "benchmark-euro-stoxx-50",
+    createdAt: "2026-01-01T00:00:00.000Z",
+    updatedAt: "2026-05-20T08:00:00.000Z"
+  },
+  {
+    id: "instrument-sp500",
+    isin: "IE00B5BMR087",
+    name: "Vanguard S&P 500 UCITS ETF",
+    instrumentType: "ETF",
+    currency: "EUR",
+    issuerName: "Vanguard",
+    assetClass: "Equity",
+    region: "United States",
+    sector: "Large cap",
+    riskScore: 4,
+    sriScore: 4,
+    expectedReturnAnnual: 0.067,
+    volatilityAnnual: 0.156,
+    maxDrawdown: -0.36,
+    ongoingCharges: 0.0007,
+    liquidityProfile: "Daily exchange-traded liquidity",
+    isComplex: false,
+    isAvailableForRetail: true,
+    kidDocumentUrl: "https://documents.example/luma/IE00B5BMR087-kid.pdf",
+    factsheetUrl: "https://documents.example/luma/IE00B5BMR087-factsheet.pdf",
+    benchmarkId: "benchmark-sp-500",
+    createdAt: "2026-01-01T00:00:00.000Z",
+    updatedAt: "2026-05-20T08:00:00.000Z"
+  },
+  {
+    id: "instrument-global-bond",
+    isin: "IE00BDBRDM35",
+    name: "Xtrackers Global Government Bond UCITS ETF",
+    instrumentType: "ETF",
+    currency: "EUR",
+    issuerName: "DWS",
+    assetClass: "Bond",
+    region: "Global",
+    sector: "Government bonds",
+    riskScore: 2,
+    sriScore: 2,
+    expectedReturnAnnual: 0.021,
+    volatilityAnnual: 0.056,
+    maxDrawdown: -0.13,
+    ongoingCharges: 0.0025,
+    liquidityProfile: "Daily exchange-traded liquidity",
+    isComplex: false,
+    isAvailableForRetail: true,
+    kidDocumentUrl: "https://documents.example/luma/IE00BDBRDM35-kid.pdf",
+    factsheetUrl: "https://documents.example/luma/IE00BDBRDM35-factsheet.pdf",
+    createdAt: "2026-01-01T00:00:00.000Z",
+    updatedAt: "2026-05-20T08:00:00.000Z"
+  },
+  {
+    id: "instrument-money-market",
+    isin: "LU1190417599",
+    name: "BNP Paribas Euro Money Market Fund",
+    instrumentType: "MONEY_MARKET_FUND",
+    currency: "EUR",
+    issuerName: "BNP Paribas AM",
+    assetClass: "Money market",
+    region: "Eurozone",
+    sector: "Short-term rates",
+    riskScore: 1,
+    sriScore: 1,
+    expectedReturnAnnual: 0.018,
+    volatilityAnnual: 0.006,
+    maxDrawdown: -0.01,
+    ongoingCharges: 0.001,
+    liquidityProfile: "Daily fund liquidity",
+    isComplex: false,
+    isAvailableForRetail: true,
+    kidDocumentUrl: "https://documents.example/luma/LU1190417599-kid.pdf",
+    factsheetUrl: "https://documents.example/luma/LU1190417599-factsheet.pdf",
+    createdAt: "2026-01-01T00:00:00.000Z",
+    updatedAt: "2026-05-20T08:00:00.000Z"
+  },
+  {
+    id: "instrument-euro-corp-bond",
+    isin: "IE00B3F81R35",
+    name: "iShares Euro Corporate Bond UCITS ETF",
+    instrumentType: "ETF",
+    currency: "EUR",
+    issuerName: "BlackRock",
+    assetClass: "Bond",
+    region: "Eurozone",
+    sector: "Corporate bonds",
+    riskScore: 2,
+    sriScore: 2,
+    expectedReturnAnnual: 0.027,
+    volatilityAnnual: 0.048,
+    maxDrawdown: -0.11,
+    ongoingCharges: 0.002,
+    liquidityProfile: "Daily exchange-traded liquidity",
+    isComplex: false,
+    isAvailableForRetail: true,
+    kidDocumentUrl: "https://documents.example/luma/IE00B3F81R35-kid.pdf",
+    factsheetUrl: "https://documents.example/luma/IE00B3F81R35-factsheet.pdf",
+    createdAt: "2026-01-01T00:00:00.000Z",
+    updatedAt: "2026-05-20T08:00:00.000Z"
+  },
+  {
+    id: "instrument-healthcare",
+    isin: "IE00BM67HK77",
+    name: "SPDR MSCI World Health Care UCITS ETF",
+    instrumentType: "ETF",
+    currency: "EUR",
+    issuerName: "State Street",
+    assetClass: "Equity",
+    region: "Global",
+    sector: "Healthcare",
+    riskScore: 4,
+    sriScore: 4,
+    expectedReturnAnnual: 0.061,
+    volatilityAnnual: 0.151,
+    maxDrawdown: -0.31,
+    ongoingCharges: 0.003,
+    liquidityProfile: "Daily exchange-traded liquidity",
+    isComplex: false,
+    isAvailableForRetail: true,
+    kidDocumentUrl: "https://documents.example/luma/IE00BM67HK77-kid.pdf",
+    factsheetUrl: "https://documents.example/luma/IE00BM67HK77-factsheet.pdf",
+    createdAt: "2026-01-01T00:00:00.000Z",
+    updatedAt: "2026-05-20T08:00:00.000Z"
+  },
+  {
+    id: "instrument-clean-energy",
+    isin: "IE00B1XNHC34",
+    name: "iShares Global Clean Energy UCITS ETF",
+    instrumentType: "ETF",
+    currency: "EUR",
+    issuerName: "BlackRock",
+    assetClass: "Equity",
+    region: "Global",
+    sector: "Clean energy",
+    riskScore: 5,
+    sriScore: 5,
+    expectedReturnAnnual: 0.073,
+    volatilityAnnual: 0.284,
+    maxDrawdown: -0.61,
+    ongoingCharges: 0.0065,
+    liquidityProfile: "Daily exchange-traded liquidity",
+    isComplex: false,
+    isAvailableForRetail: true,
+    kidDocumentUrl: "https://documents.example/luma/IE00B1XNHC34-kid.pdf",
+    factsheetUrl: "https://documents.example/luma/IE00B1XNHC34-factsheet.pdf",
+    createdAt: "2026-01-01T00:00:00.000Z",
+    updatedAt: "2026-05-20T08:00:00.000Z"
+  },
+  {
+    id: "instrument-german-bund",
+    isin: "DE0001102572",
+    name: "Federal Republic of Germany Bond 2034",
+    instrumentType: "BOND",
+    currency: "EUR",
+    issuerName: "Federal Republic of Germany",
+    assetClass: "Bond",
+    region: "Germany",
+    sector: "Sovereign",
+    riskScore: 1,
+    sriScore: 1,
+    expectedReturnAnnual: 0.023,
+    volatilityAnnual: 0.038,
+    maxDrawdown: -0.08,
+    ongoingCharges: 0,
+    liquidityProfile: "Exchange and OTC liquidity",
+    isComplex: false,
+    isAvailableForRetail: true,
+    kidDocumentUrl: "https://documents.example/luma/DE0001102572-kid.pdf",
+    prospectusUrl: "https://documents.example/luma/DE0001102572-prospectus.pdf",
+    createdAt: "2026-01-01T00:00:00.000Z",
+    updatedAt: "2026-05-20T08:00:00.000Z"
+  },
+  {
+    id: "instrument-structured-note",
+    isin: "DE000LUMA001",
+    name: "Luma Callable Yield Note Europe 2029",
+    instrumentType: "STRUCTURED_PRODUCT",
+    currency: "EUR",
+    issuerName: "Luma Markets",
+    assetClass: "Structured product",
+    region: "Europe",
+    sector: "Multi-asset",
+    riskScore: 5,
+    sriScore: 5,
+    expectedReturnAnnual: 0.082,
+    volatilityAnnual: 0.22,
+    maxDrawdown: -0.45,
+    ongoingCharges: 0.012,
+    entryFee: 0.01,
+    exitFee: 0.005,
+    liquidityProfile: "Issuer-provided secondary market",
+    isComplex: true,
+    isAvailableForRetail: false,
+    kidDocumentUrl: "https://documents.example/luma/DE000LUMA001-kid.pdf",
+    prospectusUrl: "https://documents.example/luma/DE000LUMA001-prospectus.pdf",
+    createdAt: "2026-01-01T00:00:00.000Z",
+    updatedAt: "2026-05-20T08:00:00.000Z"
+  }
+];
+
+export const defaultInstrument =
+  searchInstruments(instruments, {
+    query: "MSCI World"
+  })[0] ?? instruments[0];
+
+export const createPriceHistory = (instrumentId: string) => {
+  const seed = instrumentId.length * 3;
+
+  return Array.from({ length: 12 }, (_, index) => ({
+    label: new Intl.DateTimeFormat("en", { month: "short" }).format(new Date(2026, index, 1)),
+    value: Number((100 + seed / 10 + index * 1.8 + Math.sin(index) * 2.4).toFixed(2))
+  }));
+};
+
+export const formatPercent = (value?: number): string => {
+  if (value === undefined) {
+    return "-";
+  }
+
+  return new Intl.NumberFormat("en-DE", {
+    style: "percent",
+    minimumFractionDigits: 1,
+    maximumFractionDigits: 1
+  }).format(value);
+};
+
+export const readableType = (value: string): string => {
+  return value
+    .toLowerCase()
+    .split("_")
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(" ");
+};

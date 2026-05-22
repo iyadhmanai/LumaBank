@@ -26,6 +26,8 @@ This repository is currently in project foundation mode. The first objective is 
 - [MVP Scope](docs/product/mvp-scope.md)
 - [Delivery Plan](docs/delivery/delivery-plan.md)
 - [Phase 1 Core Domain And Audit](docs/delivery/phase-1-core-domain-and-audit.md)
+- [Phase 2 Banking Dashboard Mock](docs/delivery/phase-2-banking-dashboard-mock.md)
+- [Phase 3 Investment Catalogue](docs/delivery/phase-3-investment-catalogue.md)
 - [Architecture Principles](docs/architecture/principles.md)
 - [Phase 0 Foundation](docs/architecture/phase-0-foundation.md)
 - [Decision Log](docs/architecture/decision-log.md)
