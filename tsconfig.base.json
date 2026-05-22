@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "paths": {
+      "@luma-bank/api-client": ["packages/api-client/src/index.ts"],
+      "@luma-bank/config": ["packages/config/src/index.ts"],
+      "@luma-bank/domain": ["packages/domain/src/index.ts"],
+      "@luma-bank/ui": ["packages/ui/src/index.tsx"],
+      "@luma-bank/utils": ["packages/utils/src/index.ts"]
+    }
+  }
+}

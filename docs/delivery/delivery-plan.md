@@ -121,4 +121,3 @@ Acceptance criteria:
 - User sees fees and risk before confirmation.
 - Order preview and warning acceptance are auditable.
 - Order status transitions are explicit and tested.
-

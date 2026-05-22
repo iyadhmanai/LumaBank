@@ -25,6 +25,35 @@ This repository is currently in project foundation mode. The first objective is 
 
 - [MVP Scope](docs/product/mvp-scope.md)
 - [Delivery Plan](docs/delivery/delivery-plan.md)
+- [Phase 1 Core Domain And Audit](docs/delivery/phase-1-core-domain-and-audit.md)
 - [Architecture Principles](docs/architecture/principles.md)
+- [Phase 0 Foundation](docs/architecture/phase-0-foundation.md)
 - [Decision Log](docs/architecture/decision-log.md)
 
+## Development
+
+Install dependencies:
+
+```bash
+corepack pnpm install
+```
+
+Run the web app:
+
+```bash
+corepack pnpm dev
+```
+
+Run the API:
+
+```bash
+corepack pnpm dev:api
+```
+
+Run checks:
+
+```bash
+corepack pnpm typecheck
+corepack pnpm test
+corepack pnpm lint
+```

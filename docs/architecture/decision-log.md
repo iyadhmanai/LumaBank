@@ -73,4 +73,3 @@ Consequences:
 - More upfront modeling.
 - Lower risk of retrofitting audit behavior later.
 - Sensitive events can be tested from the start.
-

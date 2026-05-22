@@ -46,4 +46,3 @@ The MVP must model the right control points even when integrations are mocked:
 - Immutable-style audit events for sensitive actions.
 - Explicit distinction between information, recommendation, advice, and execution.
 - Data minimization and role-aware access boundaries.
-

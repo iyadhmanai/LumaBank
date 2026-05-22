@@ -53,4 +53,3 @@ Preferred flow:
 - Integration tests for API boundaries.
 - End-to-end tests for critical user journeys.
 - Security and permission tests for sensitive actions.
-
