@@ -18,6 +18,10 @@
       "types": "./dist/money/index.d.ts",
       "default": "./dist/money/index.js"
     },
+    "./portfolios": {
+      "types": "./dist/portfolios/index.d.ts",
+      "default": "./dist/portfolios/index.js"
+    },
     "./investments": {
       "types": "./dist/investments/index.d.ts",
       "default": "./dist/investments/index.js"

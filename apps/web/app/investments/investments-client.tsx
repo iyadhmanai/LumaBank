@@ -8,6 +8,7 @@ import {
   type InstrumentSearchFilters
 } from "@luma-bank/domain/investments";
 import { StatusBadge } from "@luma-bank/ui";
+import { AppNav } from "../app-nav";
 import {
   createPriceHistory,
   defaultInstrument,
@@ -68,22 +69,7 @@ export function InvestmentsClient() {
 
   return (
     <main className="app-shell">
-      <nav className="rail" aria-label="Primary">
-        <div className="brand-mark">LB</div>
-        <Link className="rail-button" href="/" aria-label="Dashboard">
-          D
-        </Link>
-        <button className="rail-button" type="button" aria-label="Cards">
-          C
-        </button>
-        <Link className="rail-button active" href="/investments" aria-label="Investments">
-          I
-        </Link>
-        <button className="rail-button" type="button" aria-label="Settings">
-          S
-        </button>
-      </nav>
-
+      <AppNav active="investments" />
       <section className="workspace investments-workspace">
         <header className="app-header">
           <div>
@@ -94,6 +80,9 @@ export function InvestmentsClient() {
             <StatusBadge label="Information only" tone="warning" />
             <Link className="ghost-button link-button" href="/">
               Banking
+            </Link>
+            <Link className="ghost-button link-button" href="/portfolio-builder">
+              Builder
             </Link>
           </div>
         </header>

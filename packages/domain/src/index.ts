@@ -13,6 +13,7 @@ export * from "./money/money.js";
 export * from "./orders/order.js";
 export * from "./orders/transitions.js";
 export * from "./portfolios/allocation.js";
+export * from "./portfolios/metrics.js";
 export * from "./portfolios/model-portfolio.js";
 export * from "./portfolios/portfolio.js";
 export * from "./portfolios/transitions.js";

@@ -1,7 +1,6 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import Link from "next/link";
 import type { CSSProperties } from "react";
 import type { BankAccount, Transaction } from "@luma-bank/domain/banking";
 import type { Money } from "@luma-bank/domain/money";
@@ -17,6 +16,7 @@ import {
   totalAvailableBalance,
   transactions
 } from "./lib/banking-dashboard-data";
+import { AppNav } from "./app-nav";
 
 type TransactionFilter = "ALL" | "INCOMING" | "OUTGOING" | "PENDING";
 
@@ -106,22 +106,7 @@ export function BankingDashboard() {
 
   return (
     <main className="app-shell">
-      <nav className="rail" aria-label="Primary">
-        <div className="brand-mark">LB</div>
-        <Link className="rail-button active" href="/" aria-label="Dashboard">
-          D
-        </Link>
-        <button className="rail-button" aria-label="Cards">
-          C
-        </button>
-        <Link className="rail-button" href="/investments" aria-label="Investments">
-          I
-        </Link>
-        <button className="rail-button" aria-label="Settings">
-          S
-        </button>
-      </nav>
-
+      <AppNav active="banking" />
       <section className="workspace">
         <header className="app-header">
           <div>
